@@ -15,8 +15,8 @@ const OUTPUT_DIR = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 // The line: the agent DID meet the deadline — just in a parallel branch.
 // Agent voice (git branch), fresh angle, one sentence, nothing to explain.
 // 73 characters, well inside the 160-character gate.
+const LINE =
+  'I missed the deadline because I was busy meeting it in a parallel branch.';
+
 mkdirSync(OUTPUT_DIR, { recursive: true });
-writeFileSync(
-  join(OUTPUT_DIR, 'entry.txt'),
-  'I missed the deadline because I was busy meeting it in a parallel branch.',
-);
+writeFileSync(join(OUTPUT_DIR, 'entry.txt'), LINE);
